@@ -31,17 +31,12 @@ public class SendQuoteSteps {
         sendQuotePage.clickSendButton();
     }
 
-    @And("waits for a Loading dialog to close")
-    public void waitsForALoadingDialogToClose() {
-        System.out.println("Loading");
-    }
-
-    @Then("the message {string} is displayed")
+    @And("the message {string} is displayed")
     public void theMessageIsDisplayed(String msg) {
         sendQuotePage.validateSucessMessage(msg);
     }
 
-    @And("the user presses the OK button")
+    @Then("the user presses the OK button")
     public void theUserPressesTheOKButton() {
         sendQuotePage.clickOKButton();
     }
