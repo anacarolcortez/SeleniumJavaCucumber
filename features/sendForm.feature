@@ -2,8 +2,8 @@
 @vehicle
 Feature: Send Automobile Insurance Form through Tricentis Site
 
-  @AutomobileInsuranceForm
-  Scenario: TC001 - Send Insurance form for Automobile product filling mandatory fields
+  @Automobile
+  Scenario: TC001 - Send Insurance form for automobile product filling mandatory fields
     Given the user selected the Automobile Insurance menu
     And the user is in the Vehicle Data Form
     And the user submits Vehicle Form correctly

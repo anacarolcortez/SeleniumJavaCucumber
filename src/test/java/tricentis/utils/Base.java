@@ -8,6 +8,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class Base extends DriverFatory {
@@ -65,5 +67,10 @@ public class Base extends DriverFatory {
     protected String getMessageFromElement(By locator){
         WebElement dialog = getDriverWait().until(ExpectedConditions.visibilityOfElementLocated(locator));
         return dialog.getText();
+    }
+
+    protected String getDateAndTime(){
+        SimpleDateFormat formatoDeData = new SimpleDateFormat("dd/MM/yy HH:mm");
+        return formatoDeData.format(new Date());
     }
 }
