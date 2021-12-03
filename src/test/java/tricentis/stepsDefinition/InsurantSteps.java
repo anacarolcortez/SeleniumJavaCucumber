@@ -10,8 +10,8 @@ public class InsurantSteps {
 
     InsurantPage insurantPage = new InsurantPage();
 
-    @And("the user is redirected to the Insurant Data form")
-    public void theUserIsRedirectedToTheInsurantDataForm() {
+    @And("the user is sent to the Insurant Data form")
+    public void theUserIsSentToTheInsurantDataForm() {
         insurantPage.validateInsurantPageTitle();
     }
 

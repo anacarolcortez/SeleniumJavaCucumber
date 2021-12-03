@@ -1,9 +1,7 @@
-#language: en
-@vehicle
-Feature: Send Automobile Insurance Form through Tricentis Site
+@Automobile
+Feature: Send Quote Form through Tricentis Site
 
-  @Automobile
-  Scenario: TC001 - Send Insurance form for automobile product filling mandatory fields
+  Background:
     Given the user selected the Automobile Insurance menu
     And the user is in the Vehicle Data Form
     And the user submits Vehicle Form correctly
@@ -15,7 +13,7 @@ Feature: Send Automobile Insurance Form through Tricentis Site
       | price       | 100000     |
       | mileage     | 200        |
     And the user presses the Next button in the Vehicle Page
-    And the user is redirected to the Insurant Data form
+    And the user is sent to the Insurant Data form
     And the user submits Insurant Form correctly
       | firstName   | Daenerys     |
       | lastName    | Targaryen    |
@@ -25,19 +23,21 @@ Feature: Send Automobile Insurance Form through Tricentis Site
       | occupation  | Selfemployed |
       | hobbies     | Skydiving    |
     And the user presses the Next button in the Insurant Page
-    And the user is redirected to the Product Data form
+    And the user is sent to the Product Data form
     And the user submits Product Form correctly
-      | startDate   | 01/02/2022              |
+      | startDate   | 01/03/2022              |
       | sum         | 7000000                 |
       | merit       | Bonus 3                 |
       | damage      | Partial Coverage        |
       | optional    | Legal Defense Insurance |
       | courtesy    | Yes                     |
     And the user presses the Next button in the Product Page
-    And the user is redirected to the Price Form
+    And the user is sent to the Price Form
     And the user selects the option "Gold" for the insurance
     And the user presses the Next button in the Price Page
-    And the user is redirected to the Quote Form
+
+  Scenario: TC005 - Send Quote Form for automobile product
+    And the user is sent to the Quote Form
     And the user submits Quote Form correctly
       | email     | dtargaryen@dracarys.com |
       | username  | motherOfDragons         |

@@ -12,8 +12,8 @@ public class SendQuoteSteps {
 
     SendQuotePage sendQuotePage = new SendQuotePage();
 
-    @And("the user is redirected to the Quote Form")
-    public void theUserIsRedirectedToTheQuoteForm() {
+    @And("the user is sent to the Quote Form")
+    public void theUserIsSentToTheQuoteForm() {
         sendQuotePage.validateSendQuoteTitle();
     }
 

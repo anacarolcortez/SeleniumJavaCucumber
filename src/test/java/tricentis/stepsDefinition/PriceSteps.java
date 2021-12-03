@@ -7,8 +7,8 @@ public class PriceSteps {
 
     PricePage pricePage = new PricePage();
 
-    @And("the user is redirected to the Price Form")
-    public void theUserIsRedirectedToThePriceForm() {
+    @And("the user is sent to the Price Form")
+    public void theUserIsSentToThePriceForm() {
         pricePage.validatePricePageTitle();
     }
 

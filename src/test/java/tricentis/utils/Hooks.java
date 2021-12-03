@@ -26,7 +26,6 @@ public class Hooks extends Base {
         getDriver().get(url);
         wordFactory.addText("Test Case: "+scenario.getName());
         wordFactory.addText("Executed at: "+getDateAndTime());
-        wordFactory.addText("Status: Passed");
     }
 
     @AfterStep

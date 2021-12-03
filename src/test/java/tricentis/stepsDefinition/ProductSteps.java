@@ -11,8 +11,8 @@ public class ProductSteps {
 
     ProductPage productPage = new ProductPage();
 
-    @And("the user is redirected to the Product Data form")
-    public void theUserIsRedirectedToTheProductDataForm() {
+    @And("the user is sent to the Product Data form")
+    public void theUserIsSentToTheProductDataForm() {
         productPage.validateProductPageTitle();
     }
 
